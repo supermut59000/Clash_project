@@ -3,6 +3,7 @@ import os
 import datetime
 from threading import Thread
 from dotenv import load_dotenv
+sys.path.insert(1, '..//Module//')
 from Clash_API_call import Clash_API_Call
 from DATABASE_HANDLER import Data_handler_my_sql
 load_dotenv('/home/mathis/Bureau/python/.env')
