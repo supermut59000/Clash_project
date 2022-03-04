@@ -1,0 +1,59 @@
+#oui{
+	background : #050401;
+}
+#EDT{
+	font-size: 40;
+	background: #303036;
+	color: #FFFAFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 50;
+	max-width: 900;
+	margin: 40 auto;
+	border-radius: 6px;
+	border: none;
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+}
+#EDT:hover{
+	color: #FC5130;
+	transform: scale(1.04);
+}
+
+#WorkContainer{
+	color: #FFFAFF;
+
+}
+
+#link{
+	background: #303036;
+	color: #FFFAFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 50;
+	max-width: 900;
+	margin: 40 auto;
+	border-radius: 6px;
+	border: none;
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+}
+#link:hover{
+	transform: scale(1.04);
+}
+#WorkToDo{
+	font-size: 20;
+	font-weight: bold;
+	margin: 10;
+
+}
+
+#date{
+	font-size: 20;
+	color: #FC5130;
+	margin: 10;
+}

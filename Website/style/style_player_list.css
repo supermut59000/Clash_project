@@ -1,0 +1,85 @@
+#oui{
+	background : #050401;
+}
+
+#Main_title{
+	display: flex;
+	color: #FFFAFF;
+	justify-content: center;
+    align-items: center;
+    visibility: visibility;
+}
+#container{
+	display: flex;
+	margin: 20 auto;
+	justify-content: center;
+    align-items: center;
+	
+}
+#page{
+	display: block;
+	margin-left: 20 auto;
+	margin-right: 20 auto;
+	justify-content: center;
+    align-items: center;
+}
+#Players_list{
+	font-size: 25;
+	color: #FFFAFF;
+	min-height: 178;
+	width: auto;
+	max-width: 816;
+	padding: 0;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+}
+#Trophie{
+	padding-right: 4;
+}
+.Image{
+	padding: 10;
+	align-items: center;
+	text-align: center;
+}
+
+#pseudo{
+	color: #FFFAFF;
+	padding: 10;
+	text-decoration: none;
+}
+#pseudo:hover{
+	color: #FC5130;
+	transition: all 0.2s ease;
+}
+
+
+#Player{
+	background: #303036;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	text-align: center;
+	min-height: 50;
+	min-width: 350;
+	margin: 8;
+	color: #FFFAFF;
+	border-radius: 6px;
+	border: none;
+	cursor: pointer;
+	transition: all .2s ease-in-out; 
+}
+
+#Player:hover{
+	transform: scale(1.04); 
+}
+
+#chart_container{
+	display: flex;
+	max-width: 900;
+	justify-content: center;
+	margin: 40 auto;
+}
