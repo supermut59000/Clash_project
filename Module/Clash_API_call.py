@@ -11,7 +11,7 @@ PngImagePlugin.MAX_TEXT_CHUNK = LARGE_ENOUGH_NUMBER * (1024**2)
 Avoid the data decrompress max value
 """
 
-load_dotenv('/home/mathis/Bureau/python/.env')
+load_dotenv('..//..//.env')
 
 TOKEN = os.getenv("API_TOKEN_CLASH")
 base_url = "https://api.clashroyale.com/v1"

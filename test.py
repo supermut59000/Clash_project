@@ -16,7 +16,7 @@ sys.path.insert(1, 'Module\\')
 from Clash_API_call import Clash_API_Call
 from DATABASE_HANDLER import Data_handler_my_sql
 from moodle_request import request_moodle
-load_dotenv()
+load_dotenv('..//.env')
 
 usr=os.getenv("MOODLE_USR")
 pwd="Mathismine59!"

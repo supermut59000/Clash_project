@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import sys
 sys.path.insert(1, '..//Module//')
 from DATABASE_HANDLER import Data_handler_my_sql
-load_dotenv('/home/mathis/Bureau/python/.env')
+load_dotenv('..//..//.env')
 
 
 host = os.getenv("DATABASE_IP")
