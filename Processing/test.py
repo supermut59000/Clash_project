@@ -17,34 +17,22 @@ password = os.getenv("DATABASE_PASSWORD")
 
 card=['Electro Giant','Mega Knight','Elite Barbarians']
 car_1='Elite Barbarians'
-usr='supermat59000'
+usr='Fantin'
+dic={}
 database_handler = Data_handler_my_sql(host, user, password, database)
 temp = database_handler.get_player_battle_card(usr)
-for counter,value in enumerate(temp):
-	if car_1 in value:
-		print(counter,value)
- 
-"""
-dic_raciste={}
-for i in card:
-	database_handler = Data_handler_my_sql(host, user, password, database)
-	temp = database_handler.get_battle_with_card(usr,i)
-	for i in temp:
-		if not dic_raciste.get(i[0]):
-			dic_raciste[i[0]]=[i[1],int(i[2])]
-		else:
-			dic_raciste[i[0]][0]+=i[1]
-			dic_raciste[i[0]][1]+=int(i[2])
+for value in temp:
+	for i in card:
+		if i in value:
+			if value[1] == "boatBattle":
+				print(value)
+			if not dic.get(value[1]):
+				dic[value[1]]={}
+				for i in card:
+					dic[value[1]][i]=0
+			dic[value[1]][i]=dic[value[1]].get(i)+1
 
-
-dic_battle={}
 database_handler = Data_handler_my_sql(host, user, password, database)
-temp = database_handler.get_nb_battle(usr)
-for i in temp:
-	dic_battle[i[0]]=i[1]
-
-
-for i in dic_raciste:
-	print(i,str(round(dic_raciste[i][0]/dic_battle[i]*100,2))+"%",
-		str(round(dic_raciste[i][1]/dic_raciste[i][0]*100,2))+"%")
-"""
+a = database_handler.get_nb_battle(usr)
+for i in a:
+	print(i[0],dic.get(i[0]),i[1])

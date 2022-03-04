@@ -19,7 +19,7 @@ PATH = os.getcwd()
 
 class Clash_API_Call:
     def get_API_status():
-        endpoint = "/players/%23" + "9UPLRG2R" 
+        endpoint = "/players/%23" + "9UPLRG2R"
         request1 = urllib.request.Request(
             base_url + endpoint, None, {"Authorization": "Bearer %s" % TOKEN}
         )
