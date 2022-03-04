@@ -7,7 +7,7 @@ sys.path.insert(1, '..//Module//')
 from Clash_API_call import Clash_API_Call
 from DATABASE_HANDLER import Data_handler_my_sql
 from moodle_request import request_moodle
-load_dotenv('..//.env')
+load_dotenv('..//..//.env')
 
 
 host = os.getenv("DATABASE_IP")
