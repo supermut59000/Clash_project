@@ -3,12 +3,6 @@ from bs4 import BeautifulSoup
 import requests
 
 
-login_data = {
-	'username': 'mathis.reslinger.etu',
-	'password': 'OUIOUIBAGUETTE',
-	'_eventId': 'submit'
-}
-
 headers = {"usre-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Safari/537.36"}
 
 

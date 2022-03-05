@@ -19,7 +19,7 @@ from moodle_request import request_moodle
 
 load_dotenv('..\\.env')
 usr=os.getenv("MOODLE_USR")
-pwd="Mathismine59!"
+pwd="OUIOUIBAGUETTE"
 
 host = "192.168.1.38"
 database = "database_1"
@@ -35,10 +35,9 @@ url = 'http://192.168.1.43:5000/'
 url_2 = 'http://192.168.1.38:5000/'
 
 
-#r = request_moodle()
-#r.connection(usr,pwd)
-#print(r.get_work_to_do())
+r = request_moodle()
+r.connection(usr,pwd)
+r.img_downloader(r.get_EDT(),os.getcwd())
 
-
-print(Clash_API_Call.get_API_status())
-temp = Clash_API_Call.usr_last_battle_decks(player_tag[1:])
+#print(Clash_API_Call.get_API_status())
+#temp = Clash_API_Call.usr_last_battle_decks(player_tag[1:])
