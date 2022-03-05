@@ -19,25 +19,23 @@ from moodle_request import request_moodle
 
 load_dotenv('..\\.env')
 usr=os.getenv("MOODLE_USR")
-pwd="OUIOUIBAGUETTE"
+pwd=os.getenv("MOODLE_PWD")
 
-host = "192.168.1.38"
-database = "database_1"
-user = "python_usr"
-password = "password"
+host =os.getenv("DATABASE_IP")
+database =os.getenv("DATABSE_NAME")
+user =os.getenv("DATABASE_USR")
+password =os.getenv("DATABASE_PASSWORD")
 
 
 player_tag = "#9UPLRG2R"
 clan_tag="#LLV9GG2P"
 player_pseudo = "supermat59000"
 
-url = 'http://192.168.1.43:5000/'
-url_2 = 'http://192.168.1.38:5000/'
 
 
-r = request_moodle()
-r.connection(usr,pwd)
-r.img_downloader(r.get_EDT(),os.getcwd())
+#r = request_moodle()
+#r.connection(usr,pwd)
+#r.img_downloader(r.get_EDT(),os.getcwd())
 
 #print(Clash_API_Call.get_API_status())
 #temp = Clash_API_Call.usr_last_battle_decks(player_tag[1:])
