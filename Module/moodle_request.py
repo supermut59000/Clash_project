@@ -50,7 +50,6 @@ class request_moodle():
 		temp = soup.find_all("a")
 		dic_temp={}
 		for i in temp:
-			
 			if i.attrs.get("data-type") and "event" in i.attrs["data-type"]:
 				dic_temp['title']=i.text[:-19]
 				dic_temp['link']=i.attrs["href"]

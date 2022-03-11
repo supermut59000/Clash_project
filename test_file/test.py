@@ -17,7 +17,7 @@ from Clash_API_call import Clash_API_Call
 from DATABASE_HANDLER import Data_handler_my_sql
 from moodle_request import request_moodle
 
-load_dotenv('..\\.env')
+load_dotenv('..\\..\\.env')
 usr=os.getenv("MOODLE_USR")
 pwd=os.getenv("MOODLE_PWD")
 
@@ -33,9 +33,11 @@ player_pseudo = "supermat59000"
 
 
 
-#r = request_moodle()
-#r.connection(usr,pwd)
-#r.img_downloader(r.get_EDT(),os.getcwd())
+r = request_moodle()
+r.connection(usr,pwd)
+#print(r.get_work_to_do())
+
+r.img_downloader(r.get_EDT(),os.getcwd())
 
 #print(Clash_API_Call.get_API_status())
 #temp = Clash_API_Call.usr_last_battle_decks(player_tag[1:])
