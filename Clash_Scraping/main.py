@@ -70,8 +70,12 @@ def usr_last_battle_decks(player_tag: str):
             temp[0][3])[0]
 
     win = temp[2]
-    usr_current_tr = temp[1]
     battle_type = temp[3]
+    if battle_type != "PvP":
+        database_handler = Data_handler_my_sql(host, user, password, database)
+        usr_current_tr = database_handler.get_usr_tr(player_tag)[0][0]
+    else:
+        usr_current_tr = temp[1]
     battle_time = temp[4]
     return deck_id_usr,deck_id_opponent,usr_current_tr,battle_type,battle_time,win
 

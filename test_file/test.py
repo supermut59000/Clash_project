@@ -32,12 +32,14 @@ clan_tag="#LLV9GG2P"
 player_pseudo = "supermat59000"
 
 
-
-r = request_moodle()
-r.connection(usr,pwd)
+database_handler = Data_handler_my_sql(host, user, password, database)
+print(database_handler.get_usr_start_tr(player_pseudo))
+#r = request_moodle()
+#r.connection(usr,pwd)
 #print(r.get_work_to_do())
 
-r.img_downloader(r.get_EDT(),os.getcwd())
+#r.img_downloader(r.get_EDT(),os.getcwd())
 
 #print(Clash_API_Call.get_API_status())
 #temp = Clash_API_Call.usr_last_battle_decks(player_tag[1:])
+#print(temp[1])

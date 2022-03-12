@@ -322,6 +322,19 @@ class Data_handler_my_sql():
         self.connector.close()
         return data
 
+    def get_last_trophie_usr(self, player_tag : str):
+        cursor = self.connector.cursor()
+        SELECT = f"SELECT Battle.usr_current_tr "
+        FROM = f"FROM Battle INNER JOIN Tracked_usr ON Battle.usr_tag = Tracked_usr.usr_tag "
+        WHERE = f"WHERE Tracked_usr.usr_tag = %s and Battle.battle_type = 'PvP' "
+        ORDER_BY = f"ORDER BY Battle_time DESC LIMIT 1;"
+        query = (SELECT + FROM + WHERE + ORDER_BY)
+        cursor.execute(query,(player_tag,),)
+        data = cursor.fetchall()
+        cursor.close()
+        self.connector.close()
+        return data
+
     def get_usr_start_tr(self, player_name :str):
         cursor = self.connector.cursor()
         SELECT = f"SELECT usr_current_tr "
@@ -333,4 +346,3 @@ class Data_handler_my_sql():
         cursor.close()
         self.connector.close()
         return data
-
