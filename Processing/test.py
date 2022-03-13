@@ -17,15 +17,13 @@ password = os.getenv("DATABASE_PASSWORD")
 
 card=['Electro Giant','Mega Knight','Elite Barbarians']
 car_1='Elite Barbarians'
-usr='Fantin'
+usr='supermat59000'
 dic={}
 database_handler = Data_handler_my_sql(host, user, password, database)
 temp = database_handler.get_player_battle_card(usr)
 for value in temp:
 	for i in card:
 		if i in value:
-			if value[1] == "boatBattle":
-				print(value)
 			if not dic.get(value[1]):
 				dic[value[1]]={}
 				for i in card:
