@@ -285,7 +285,7 @@ class Data_handler_my_sql():
 
     def get_player_battle_card(self , player_name : str):
         cursor = self.connector.cursor()
-        SELECT = f"SELECT Tracked_usr.usr_pseudo,Battle.battle_type, card_1, card_2, card_3, card_4, card_5, card_6, card_7, card_8 "
+        SELECT = f"SELECT Tracked_usr.usr_pseudo,Battle.battle_type, card_1, card_2, card_3, card_4, card_5, card_6, card_7, card_8, win "
         FROM = f"FROM (user_deck INNER JOIN Battle ON user_deck.user_deck_id = Battle.usr_deck_id) INNER JOIN Tracked_usr ON Battle.usr_tag = Tracked_usr.usr_tag "
         WHERE = f"WHERE Tracked_usr.usr_pseudo = %s;"
         query = (SELECT + FROM + WHERE)

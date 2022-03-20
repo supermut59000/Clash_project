@@ -31,6 +31,9 @@
 	align-items: center;
 	text-align: center;
 }
+#Work{
+	margin-top: 16;
+}
 
 #WorkContainer{
 	color: #FFFAFF;

@@ -17,20 +17,26 @@ password = os.getenv("DATABASE_PASSWORD")
 
 card=['Electro Giant','Mega Knight','Elite Barbarians']
 car_1='Elite Barbarians'
-usr='supermat59000'
+usr='Alex'
 dic={}
 database_handler = Data_handler_my_sql(host, user, password, database)
 temp = database_handler.get_player_battle_card(usr)
+
+
 for value in temp:
 	for i in card:
 		if i in value:
 			if not dic.get(value[1]):
 				dic[value[1]]={}
 				for i in card:
-					dic[value[1]][i]=0
-			dic[value[1]][i]=dic[value[1]].get(i)+1
+					dic[value[1]][i]=(0,0)
+			dic[value[1]][i]=(dic[value[1]].get(i)[0]+1,dic[value[1]].get(i)[1]+value[-1])
+
 
 database_handler = Data_handler_my_sql(host, user, password, database)
 a = database_handler.get_nb_battle(usr)
 for i in a:
 	print(i[0],dic.get(i[0]),i[1])
+
+
+multi_card = {'Electro Giant' : 2,'Mega Knight' : 1.5,'Elite Barbarians' : 1.6 }
