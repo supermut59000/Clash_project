@@ -9,12 +9,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	text-align: center;
 	min-height: 50;
-	max-width: 900;
+	max-width: 800;
 	margin: 40 auto;
-	border-radius: 6px;
-	border: none;
+	border-radius: 20px;
 	text-decoration: none;
 	transition: all .2s ease-in-out;
 }
@@ -29,7 +27,6 @@
 	color: #FFFAFF;
 	justify-content: center;
 	align-items: center;
-	text-align: center;
 }
 #Work{
 	margin-top: 16;
@@ -54,7 +51,7 @@
 	min-height: 50;
 	max-width: 700;
 	margin: 0 auto;
-	border-radius: 6px;
+	border-radius: 20px;
 	border: none;
 	text-decoration: none;
 	transition: all .2s ease-in-out;

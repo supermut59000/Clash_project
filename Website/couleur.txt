@@ -1,6 +1,6 @@
 couleur 
-30BCED
-303036
-FFFAFF
-FC5130
-050401
+30BCED Highlitght Text color Blue
+303036 Light Background
+FFFAFF Base Text color White
+FC5130 Highlitght Text color Orange
+050401 Dark Background
